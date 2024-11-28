@@ -1536,6 +1536,7 @@ in Configuration->Emulation, restart PCSX-Redux, then try again.)"));
         if (!fileToOpen.empty()) {
             PCSX::g_emulator->m_cdrom->setIso(new CDRIso(reinterpret_cast<const char*>(fileToOpen[0].c_str())));
             PCSX::g_emulator->m_cdrom->check();
+            g_system->resume();
         }
     }
 
