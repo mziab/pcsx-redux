@@ -1323,7 +1323,7 @@ void PCSX::GUI::endFrame() {
                 if (ImGui::MenuItem(_("Hard Reset"), "Shift+F8")) {
                     g_system->hardReset();
                 }
-                if (ImGui::MenuItem(_("Take Screenshot"))) {
+                if (ImGui::MenuItem(_("Take Screenshot"), "F12")) {
                     saveScreenShot();
                 }
                 ImGui::EndMenu();
