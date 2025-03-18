@@ -2945,7 +2945,8 @@ std::string PCSX::GUI::getDateString() {
     auto local_time = std::localtime(&in_time_t);
 
     std::stringstream ss;
-    ss << std::put_time(local_time, "%Y-%m-%d-%H-%M-%S");
+    constexpr const char* SCREENSHOT_DATE_FORMAT = "%Y-%m-%d-%H-%M-%S";
+    ss << std::put_time(local_time, SCREENSHOT_DATE_FORMAT);
 
     std::string datetime_string = ss.str();
 
